@@ -27,6 +27,7 @@ namespace MagicMirrorTest
     {
         List<String> movies = new List<string>();
         String[] dbgText = new String[2];
+        private const String PORT = "8080";
         public MainWindow()
         {
             InitializeComponent();
@@ -50,11 +51,11 @@ namespace MagicMirrorTest
                 movies.Add(moviesName);
             }
 
-            WebServer ws = new WebServer(SendResponse, "http://localhost:8080/"); //TODO: IP
+            WebServer ws = new WebServer(SendResponse, "http://" + localIP + ":" + PORT + "/");
             ws.Run();
 
             //labelDebugInfo.Content = "IP: " + localIP;
-            dbgText[0] = "IP: " + localIP;
+            dbgText[0] = "IP: " + localIP + ":" + PORT;
             dbgText[1] = "Face: null";
             updateDebugText();
 
