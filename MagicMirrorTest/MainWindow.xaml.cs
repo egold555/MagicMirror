@@ -49,11 +49,11 @@ namespace MagicMirrorTest
                 movies.Add(moviesName);
             }
 
-            WebServer ws = new WebServer(SendResponse, "http://localhost:8080/");
+            WebServer ws = new WebServer(SendResponse, "http://localhost:8080/"); //TODO: IP
             ws.Run();
 
             labelDebugInfo.Content = "IP: " + localIP;
-            labelDebugInfo.Visibility = Visibility.Hidden;
+            labelDebugInfo.Visibility = Visibility.Visible;
         }
 
         public string SendResponse(HttpListenerRequest request)
@@ -64,6 +64,16 @@ namespace MagicMirrorTest
                 this.Dispatcher.Invoke(delegate {
                     PlayMovie(theMovie);
                 });
+            }
+
+            if (request.RawUrl.StartsWith("/settings/")) {
+                string theSetting = request.RawUrl.Substring(10);
+                this.Dispatcher.Invoke(delegate {
+                    if (theSetting == "debug") {
+                        labelDebugInfo.Visibility = ToggleVisibility(labelDebugInfo.Visibility);
+                    }
+                });
+                
             }
 
             String toReturn = "<html>";
@@ -111,8 +121,6 @@ namespace MagicMirrorTest
                 }
             }
 
-            //toReturn += "</div>";
-
             toReturn += "</body>";
             toReturn += "</html>";
 
@@ -127,6 +135,11 @@ namespace MagicMirrorTest
             mediaElement.Play();
         }
 
+        private Visibility ToggleVisibility(Visibility visibility)
+        {
+            return visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+        }
+
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
         {
             mediaElement.Visibility = Visibility.Hidden;
@@ -139,6 +152,7 @@ namespace MagicMirrorTest
             }
         }
 
+        //TODO: Long run this might not be nessessarry (Button)
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //Second monitor
@@ -160,7 +174,7 @@ namespace MagicMirrorTest
             }
 
         }
-
+        //TODO: Long run this might not be nessessarry (Button)
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             this.WindowState = WindowState.Maximized; //Second monitor
