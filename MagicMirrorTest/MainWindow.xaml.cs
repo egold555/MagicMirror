@@ -26,6 +26,7 @@ namespace MagicMirrorTest
     public partial class MainWindow : Window
     {
         List<String> movies = new List<string>();
+        String[] dbgText = new String[2];
         public MainWindow()
         {
             InitializeComponent();
@@ -52,8 +53,12 @@ namespace MagicMirrorTest
             WebServer ws = new WebServer(SendResponse, "http://localhost:8080/"); //TODO: IP
             ws.Run();
 
-            labelDebugInfo.Content = "IP: " + localIP;
-            labelDebugInfo.Visibility = Visibility.Visible; //TODO: More debug text?
+            //labelDebugInfo.Content = "IP: " + localIP;
+            dbgText[0] = "IP: " + localIP;
+            dbgText[1] = "Face: null";
+            updateDebugText();
+
+            labelDebugInfo.Visibility = Visibility.Visible;
         }
 
         public string SendResponse(HttpListenerRequest request)
@@ -180,6 +185,8 @@ namespace MagicMirrorTest
             mediaElement.Source = new Uri(System.IO.Path.GetFullPath("movies\\" + name + ".mp4"));
             mediaElement.Visibility = Visibility.Visible;
             mediaElement.Play();
+            dbgText[1] = "Face: " + "movies\\" + name + ".mp4";
+            updateDebugText();
         }
 
         private Visibility ToggleVisibility(Visibility visibility)
@@ -197,6 +204,15 @@ namespace MagicMirrorTest
             if (e.Key == Key.Escape) {
                 this.Close();
             }
+        }
+
+        private void updateDebugText()
+        {
+            String toPrint = "";
+            for(int i = 0; i < dbgText.Length; i++) {
+                toPrint += dbgText[i] + "\r\n";
+            }
+            labelDebugInfo.Content = toPrint;
         }
 
         //TODO: Long run this might not be nessessarry (Button)

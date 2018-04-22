@@ -10,6 +10,6 @@
         <DockPanel>
             <MediaElement x:Name="mediaElement" MediaEnded="mediaElement_MediaEnded"/>
         </DockPanel>
-        <Label x:Name="labelDebugInfo" Background="#FF101010" DockPanel.Dock="Bottom" Foreground="#FF10FF10" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="48" Content="IP: Waiting..." />
+        <Label x:Name="labelDebugInfo" Background="#00000000" DockPanel.Dock="Bottom" Foreground="#FF10FF10" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="48" Content="labelDebugInfo" />
     </Grid>
 </Window>
