@@ -53,7 +53,7 @@ namespace MagicMirrorTest
             ws.Run();
 
             labelDebugInfo.Content = "IP: " + localIP;
-            labelDebugInfo.Visibility = Visibility.Visible;
+            labelDebugInfo.Visibility = Visibility.Visible; //TODO: More debug text?
         }
 
         public string SendResponse(HttpListenerRequest request)
