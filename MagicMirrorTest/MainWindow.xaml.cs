@@ -274,9 +274,8 @@ namespace MagicMirrorTest
 
                     String iconClass = "icon-" + itemKey.Replace('\\', '-').Replace('_', '-');
 
-                    if (!iconClass.Contains("tts") && !iconClass.Contains("tss") && !iconClass.Contains("lipsync") && !iconClass.Contains("old") && !iconClass.Contains("black")) {
-                        toReturn += "<div class=" + iconClass + "><a href=\"/play/movie/" + itemKey + "/" + movie + "\">" + movie + "</a></div>";
-                    }
+                    toReturn += "<div class=" + iconClass + "><a href=\"/play/movie/" + itemKey + "/" + movie + "\">" + movie + "</a></div>";
+                    
                 }
             }
 
