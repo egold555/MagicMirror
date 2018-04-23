@@ -51,7 +51,7 @@ namespace MagicMirrorTest
                                 ctx.Response.ContentLength64 = buf.Length;
                                 ctx.Response.OutputStream.Write(buf, 0, buf.Length);
                             }
-                            catch { } // suppress any exceptions
+                            catch(Exception ex) { Console.WriteLine(ex.ToString()); } // suppress any exceptions
                             finally {
                                 // always close the stream
                                 ctx.Response.OutputStream.Close();
@@ -59,7 +59,7 @@ namespace MagicMirrorTest
                         }, _listener.GetContext());
                     }
                 }
-                catch { } // suppress any exceptions
+               catch(Exception ex) { Console.WriteLine(ex.ToString()); } // suppress any exceptions
             });
         }
 

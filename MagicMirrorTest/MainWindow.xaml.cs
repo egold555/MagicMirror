@@ -26,6 +26,8 @@ namespace MagicMirrorTest
     public partial class MainWindow : Window
     {
 
+        const bool SECOND_MONITOR = false;
+
         Dictionary<String, List<String>> folders = new Dictionary<String, List<String>>();
         String[] dbgText = new String[2];
         private const String PORT = "8080";
@@ -280,29 +282,37 @@ namespace MagicMirrorTest
         //TODO: Long run this might not be nessessarry (Button)
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //Second monitor
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.WindowState = WindowState.Normal;
 
-            var screen = System.Windows.Forms.Screen.AllScreens[1];
-            var workingArea = screen.WorkingArea;
-            this.Left = workingArea.Left;
-            this.Top = workingArea.Top;
-            this.Width = workingArea.Width;
-            this.Height = workingArea.Height;
+            if (SECOND_MONITOR)
+            {
+                //Second monitor
+                
 
-            //Nice shitty bug workaround : https://stackoverflow.com/questions/4189660/why-does-wpf-mediaelement-not-work-on-secondary-monitor
-            var hwndSource = PresentationSource.FromVisual(this) as HwndSource;
-            if (hwndSource != null) {
-                var hwndTarget = hwndSource.CompositionTarget;
-                if (hwndTarget != null) hwndTarget.RenderMode = RenderMode.SoftwareOnly;
+                var screen = System.Windows.Forms.Screen.AllScreens[1];
+                var workingArea = screen.WorkingArea;
+                this.Left = workingArea.Left;
+                this.Top = workingArea.Top;
+                this.Width = workingArea.Width;
+                this.Height = workingArea.Height;
+
+                //Nice shitty bug workaround : https://stackoverflow.com/questions/4189660/why-does-wpf-mediaelement-not-work-on-secondary-monitor
+                var hwndSource = PresentationSource.FromVisual(this) as HwndSource;
+                if (hwndSource != null) {
+                    var hwndTarget = hwndSource.CompositionTarget;
+                    if (hwndTarget != null) hwndTarget.RenderMode = RenderMode.SoftwareOnly;
+                }
             }
 
         }
         //TODO: Long run this might not be nessessarry (Button)
         private void Window_ContentRendered(object sender, EventArgs e)
         {
-            this.WindowState = WindowState.Maximized; //Second monitor
+            if (SECOND_MONITOR)
+            {
+                this.WindowState = WindowState.Maximized; //Second monitor
+            }
         }
     }
 }
