@@ -100,308 +100,239 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="movies\blank.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="movies\GhostGirl_none.mp4" />
-    <Content Include="movies\idle_black.mp4">
+    <Content Include="movies\misc\idle_black.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\doorbell_pirate.mp4">
+    <Content Include="movies\pirate\doorbell.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\drink1_pirate.mp4">
+    <Content Include="movies\pirate\drink1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\drink2_pirate.mp4">
+    <Content Include="movies\pirate\drink2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\drink3_pirate.mp4">
+    <Content Include="movies\pirate\drink3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\drink4_pirate.mp4">
+    <Content Include="movies\pirate\drink4.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\idle_pirate.mp4">
+    <Content Include="movies\pirate\idle.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\no_internet_pirate.mp4">
+    <Content Include="movies\pirate\no_internet.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\phone_pirate.mp4">
+    <Content Include="movies\pirate\phone.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\proximity1_pirate.mp4">
+    <Content Include="movies\pirate\proximity1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\proximity2_pirate.mp4">
+    <Content Include="movies\pirate\proximity2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\proximity3_pirate.mp4">
+    <Content Include="movies\pirate\proximity3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\stock_down_pirate.mp4">
+    <Content Include="movies\pirate\stock_down.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\stock_no_change_pirate.mp4">
+    <Content Include="movies\pirate\stock_no_change.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\stock_up_pirate.mp4">
+    <Content Include="movies\pirate\stock_up.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\weather_good_pirate.mp4">
+    <Content Include="movies\pirate\weather_good.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\weather_ok_pirate.mp4">
+    <Content Include="movies\pirate\weather_ok.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\weather_rain_pirate.mp4">
+    <Content Include="movies\pirate\weather_rain.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\x10_off_pirate.mp4">
+    <Content Include="movies\pirate\x10_off.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pirate\x10_on_pirate.mp4">
+    <Content Include="movies\pirate\x10_on.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\doorbell_princess.mp4">
+    <Content Include="movies\princess\doorbell.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\princess\doorbell_tts.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink1_princess.mp4">
+    <Content Include="movies\princess\drink1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink1_tts.mp4">
+    <Content Include="movies\princess\drink2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink2_princess.mp4">
+    <Content Include="movies\princess\drink3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink2_tts.mp4">
+    <Content Include="movies\princess\drink4.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink3_princess.mp4">
+    <Content Include="movies\princess\idle.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink3_tts.mp4">
+    <Content Include="movies\princess\no_internet.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink4_princess.mp4">
+    <Content Include="movies\princess\phone.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\drink4_tts.mp4">
+    <Content Include="movies\princess\proximity1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\idle_lipsync.mp4">
+    <Content Include="movies\princess\proximity2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\idle_lipsyncl.mp4">
+    <Content Include="movies\princess\proximity3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\idle_princess.mp4">
+    <Content Include="movies\princess\stock_down.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\idle_tts.mp4">
+    <Content Include="movies\princess\stock_no_change.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\no_internet_princess.mp4">
+    <Content Include="movies\princess\stock_up.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\no_internet_tts.mp4">
+    <Content Include="movies\princess\weather_good.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\phone_princess.mp4">
+    <Content Include="movies\princess\weather_ok.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\phone_tss.mp4">
+    <Content Include="movies\princess\weather_rain.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\proximity1_princess.mp4">
+    <Content Include="movies\princess\x10_off.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\proximity1_tts.mp4">
+    <Content Include="movies\princess\x10_on.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\proximity2_princess.mp4">
+    <Content Include="movies\pumpkin\doorbell.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\proximity2_tts.mp4">
+    <Content Include="movies\pumpkin\drink1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\proximity3_princess.mp4">
+    <Content Include="movies\pumpkin\drink2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\proximity3_tts.mp4">
+    <Content Include="movies\pumpkin\drink3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\stock_down_princess.mp4">
+    <Content Include="movies\pumpkin\drink4.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\stock_down_tts.mp4">
+    <Content Include="movies\pumpkin\idle.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\stock_no_change_princess.mp4">
+    <Content Include="movies\pumpkin\no_internet.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\stock_no_change_tts.mp4">
+    <Content Include="movies\pumpkin\proximity1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\stock_up_princess.mp4">
+    <Content Include="movies\pumpkin\proximity2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\stock_up_tts.mp4">
+    <Content Include="movies\pumpkin\proximity3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_good_princess.mp4">
+    <Content Include="movies\pumpkin\stock_down.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_good_tts.mp4">
+    <Content Include="movies\pumpkin\stock_no_change.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_good_tts_old.mp4">
+    <Content Include="movies\pumpkin\stock_up.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_ok_princess.mp4">
+    <Content Include="movies\pumpkin\weather_good.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_ok_tts.mp4">
+    <Content Include="movies\pumpkin\weather_ok.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_ok_tts_old.mp4">
+    <Content Include="movies\pumpkin\weather_rain.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_rain_princess.mp4">
+    <Content Include="movies\pumpkin\x10_off.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\weather_rain_tts.mp4">
+    <Content Include="movies\pumpkin\x10_on.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\x10_off_princess.mp4">
+    <Content Include="movies\skull\doorbell.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\x10_off_tts.mp4">
+    <Content Include="movies\skull\drink1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\x10_on_princess.mp4">
+    <Content Include="movies\skull\drink2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\princess\x10_on_tts.mp4">
+    <Content Include="movies\skull\drink3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pumpkin\doorbell_insult.mp4">
+    <Content Include="movies\skull\drink4.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pumpkin\drink1_insult.mp4">
+    <Content Include="movies\skull\idle.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pumpkin\drink2_insult.mp4">
+    <Content Include="movies\skull\no_internet.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\pumpkin\drink3_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\drink4_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\idle_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\no_internet_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\proximity1_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\proximity2_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\proximity3_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\stock_down_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\stock_no_change_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\stock_up_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\weather_good_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\weather_ok_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\weather_rain_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\x10_off_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\pumpkin\x10_on_insult.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\doorbell_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\drink1_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\drink2_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\drink3_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\drink4_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\idle_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\no_internet_halloween.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\skull\phone_halloween.mp4">
+    <Content Include="movies\skull\phone.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\skull\phone_insult.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\proximity1_halloween.mp4">
+    <Content Include="movies\skull\proximity1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\proximity2_halloween.mp4">
+    <Content Include="movies\skull\proximity2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\proximity3_halloween.mp4">
+    <Content Include="movies\skull\proximity3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\stock_down_halloween.mp4">
+    <Content Include="movies\skull\stock_down.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\stock_no_change_halloween.mp4">
+    <Content Include="movies\skull\stock_no_change.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\stock_up_halloween.mp4">
+    <Content Include="movies\skull\stock_up.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\weather_good_halloween.mp4">
+    <Content Include="movies\skull\weather_good.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\weather_ok_halloween.mp4">
+    <Content Include="movies\skull\weather_ok.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\weather_rain_halloween.mp4">
+    <Content Include="movies\skull\weather_rain.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\x10_off_halloween.mp4">
+    <Content Include="movies\skull\x10_off.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="movies\skull\x10_on_halloween.mp4">
+    <Content Include="movies\skull\x10_on.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\SplitFlying.mp4">
@@ -414,6 +345,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\SplitSkeleton_none.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wsfiles\jquery-3.3.1.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wsfiles\script.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

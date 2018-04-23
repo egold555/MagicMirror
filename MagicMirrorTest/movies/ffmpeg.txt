@@ -1,0 +1,1 @@
+ffmpeg -i SomeInput.mp4 -vf "crop=in_h*10/16:in_h,scale=-2:400,transpose=1" SomeOutput.mp4
