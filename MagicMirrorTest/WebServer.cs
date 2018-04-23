@@ -42,6 +42,7 @@ namespace MagicMirrorTest
                 Console.WriteLine("Webserver running...");
                 try {
                     while (_listener.IsListening) {
+                        //TODO: Fix the insane amount of crashes this has
                         ThreadPool.QueueUserWorkItem((c) => {
                             var ctx = c as HttpListenerContext;
                             try {
