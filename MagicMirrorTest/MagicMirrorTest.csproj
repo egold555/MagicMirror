@@ -101,6 +101,38 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="movies\GhostGirl_none.mp4" />
+	<Content Include="movies\apparitions\beckoning_beauty\Come_Here.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\beckoning_beauty\Cry_Scream.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\beckoning_beauty\Hover.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\beckoning_beauty\Kiss.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\beckoning_beauty\Startle.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	
+	<Content Include="movies\apparitions\ghoulish_girl\Bear_Scare.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\ghoulish_girl\Come_Play_With_Me.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\ghoulish_girl\Go_Away.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\ghoulish_girl\Laughing_Jump.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="movies\apparitions\ghoulish_girl\Startle.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	
     <Content Include="movies\misc\idle_black.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -162,9 +194,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\princess\doorbell.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\princess\doorbell_tts.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\princess\drink1.mp4">

@@ -46,6 +46,8 @@ namespace MagicMirrorTest
             List<String> princess = new List<String>();
             List<String> skull = new List<String>();
             List<String> pirate = new List<String>();
+            List<String> apparitionsGG = new List<String>();
+            List<String> apparitionsBB = new List<String>();
 
             foreach (String file in Directory.GetFiles("movies/misc", "*.mp4")) {
                 string moviesName = Path.GetFileNameWithoutExtension(file);
@@ -72,9 +74,23 @@ namespace MagicMirrorTest
                 pirate.Add(moviesName);
             }
 
-            
-           
-            
+            foreach (String file in Directory.GetFiles("movies/apparitions/ghoulish_girl", "*.mp4"))
+            {
+                string moviesName = Path.GetFileNameWithoutExtension(file);
+                apparitionsGG.Add(moviesName);
+            }
+
+            foreach (String file in Directory.GetFiles("movies/apparitions/beckoning_beauty", "*.mp4"))
+            {
+                string moviesName = Path.GetFileNameWithoutExtension(file);
+                apparitionsBB.Add(moviesName);
+            }
+
+
+
+
+            folders.Add("apparitions\\beckoning_beauty", apparitionsBB);
+            folders.Add("apparitions\\ghoulish_girl", apparitionsGG);
             folders.Add("skull", skull);
             folders.Add("pirate", pirate);
             folders.Add("pumpkin", pumpkin);
@@ -232,7 +248,7 @@ namespace MagicMirrorTest
                 List<String> itemValue = item.Value;
                 foreach (String movie in itemValue) {
 
-                    String iconClass = "icon-" + itemKey;
+                    String iconClass = "icon-" + itemKey.Replace('\\', '-').Replace('_', '-');
 
                     if (!iconClass.Contains("tts") && !iconClass.Contains("tss") && !iconClass.Contains("lipsync") && !iconClass.Contains("old") && !iconClass.Contains("black")) {
                         toReturn += "<div class=" + iconClass + "><a href=\"/play/movie/" + itemKey + "/" + movie + "\">" + movie + "</a></div>";
