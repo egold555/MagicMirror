@@ -100,40 +100,52 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="movies\GhostGirl_none.mp4" />
-	<Content Include="movies\apparitions\beckoning_beauty\Come_Here.mp4">
+    <Content Include="movies\apparitions\beckoning_beauty\Come_Here.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\beckoning_beauty\Cry_Scream.mp4">
+    <Content Include="movies\apparitions\beckoning_beauty\Cry_Scream.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\beckoning_beauty\Hover.mp4">
+    <Content Include="movies\apparitions\beckoning_beauty\Hover.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\beckoning_beauty\Kiss.mp4">
+    <Content Include="movies\apparitions\beckoning_beauty\Kiss.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\beckoning_beauty\Startle.mp4">
+    <Content Include="movies\apparitions\beckoning_beauty\Startle.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	
-	<Content Include="movies\apparitions\ghoulish_girl\Bear_Scare.mp4">
+    <Content Include="movies\apparitions\ghoulish_girl\Bear_Scare.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\ghoulish_girl\Come_Play_With_Me.mp4">
+    <Content Include="movies\apparitions\ghoulish_girl\Come_Play_With_Me.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\ghoulish_girl\Go_Away.mp4">
+    <Content Include="movies\apparitions\ghoulish_girl\Go_Away.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\ghoulish_girl\Laughing_Jump.mp4">
+    <Content Include="movies\apparitions\ghoulish_girl\Laughing_Jump.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	<Content Include="movies\apparitions\ghoulish_girl\Startle.mp4">
+    <Content Include="movies\apparitions\ghoulish_girl\Startle.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-	
-    <Content Include="movies\misc\idle_black.mp4">
+    <Content Include="movies\ghost\flying.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="movies\ghost\NoHead.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="movies\ghost\ScreamScare.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="movies\skeleton\RemoveHead.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="movies\skeleton\Flying.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="movies\misc\blank.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\pirate\doorbell.mp4">
@@ -362,18 +374,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="movies\skull\x10_on.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\SplitFlying.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\SplitGhostWomen_none.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\SplitSkeleton2_none.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="movies\SplitSkeleton_none.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="wsfiles\jquery-3.3.1.min.js">

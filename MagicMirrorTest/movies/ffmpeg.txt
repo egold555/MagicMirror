@@ -1,1 +1,3 @@
 ffmpeg -i SomeInput.mp4 -vf "crop=in_h*10/16:in_h,scale=-2:400,transpose=1" SomeOutput.mp4
+
+Rotate 180: ffmpeg -i in.mp4 -vf "transpose=2,transpose=2" out.mp4
