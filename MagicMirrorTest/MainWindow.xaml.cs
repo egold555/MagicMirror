@@ -44,6 +44,7 @@ namespace MagicMirrorTest
             initWebServer();
             synth.SetOutputToDefaultAudioDevice();
             synth.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(synth_SpeakCompleted);
+            synth.SelectVoice("VW Julie");
         }
 
         private void initVideoFiles()
