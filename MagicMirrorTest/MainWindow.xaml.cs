@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,14 +33,17 @@ namespace MagicMirrorTest
         String[] dbgText = new String[2];
         private const String PORT = "8080";
 
-        private Dictionary<String, String> wsIcons = new Dictionary<String, String>(); 
+        private Dictionary<String, String> wsIcons = new Dictionary<String, String>();
+
+        private SpeechSynthesizer synth = new SpeechSynthesizer();
 
         public MainWindow()
         {
             InitializeComponent();
             initVideoFiles();
             initWebServer();
-            
+            synth.SetOutputToDefaultAudioDevice();
+            synth.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(synth_SpeakCompleted);
         }
 
         private void initVideoFiles()
@@ -284,6 +288,14 @@ namespace MagicMirrorTest
 
         void PlayMovie(string name)
         {
+
+            if(name.Contains( "TTSTEST"))
+            {
+                PromptBuilder builder = new PromptBuilder();
+                builder.AppendText("Hello World. This is a test of text to speech and having the video somewhat mimic the test. The video should end now.");
+                synth.SpeakAsync(builder);
+            }
+
             mediaElement.LoadedBehavior = MediaState.Manual;
             mediaElement.Source = new Uri(System.IO.Path.GetFullPath("movies\\" + name + ".mp4"));
             mediaElement.Visibility = Visibility.Visible;
@@ -295,6 +307,12 @@ namespace MagicMirrorTest
         private Visibility ToggleVisibility(Visibility visibility)
         {
             return visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+         void synth_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
+        {
+            Console.WriteLine("Speak operation completed");
+            mediaElement.Visibility = Visibility.Hidden;
         }
 
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
