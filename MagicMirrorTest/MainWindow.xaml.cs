@@ -26,7 +26,7 @@ namespace MagicMirrorTest
     public partial class MainWindow : Window
     {
 
-        const bool SECOND_MONITOR = true;
+        const bool SECOND_MONITOR = false;
 
         Dictionary<String, List<String>> folders = new Dictionary<String, List<String>>();
         Dictionary<String, MediaElement> movieMedia = new Dictionary<String, MediaElement>();
