@@ -293,7 +293,7 @@ namespace MagicMirrorTest
             if(name.Contains( "TTSTEST"))
             {
                 PromptBuilder builder = new PromptBuilder();
-                builder.AppendText("Hello World. This is a test of text to speech and having the video somewhat mimic the test. The video should end now.");
+                builder.AppendText("Hello World. This is a test of text to speech and having the video somewhat mimic the text. The video should end now.");
                 synth.SpeakAsync(builder);
             }
 
