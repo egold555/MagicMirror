@@ -26,9 +26,10 @@ namespace MagicMirrorTest
     public partial class MainWindow : Window
     {
 
-        const bool SECOND_MONITOR = false;
+        const bool SECOND_MONITOR = true;
 
         Dictionary<String, List<String>> folders = new Dictionary<String, List<String>>();
+        Dictionary<String, MediaElement> movieMedia = new Dictionary<String, MediaElement>();
         String[] dbgText = new String[2];
         private const String PORT = "8080";
 
@@ -78,26 +79,22 @@ namespace MagicMirrorTest
                 pirate.Add(moviesName);
             }
 
-            foreach (String file in Directory.GetFiles("movies/apparitions/ghoulish_girl", "*.mp4"))
-            {
+            foreach (String file in Directory.GetFiles("movies/apparitions/ghoulish_girl", "*.mp4")) {
                 string moviesName = Path.GetFileNameWithoutExtension(file);
                 apparitionsGG.Add(moviesName);
             }
 
-            foreach (String file in Directory.GetFiles("movies/apparitions/beckoning_beauty", "*.mp4"))
-            {
+            foreach (String file in Directory.GetFiles("movies/apparitions/beckoning_beauty", "*.mp4")) {
                 string moviesName = Path.GetFileNameWithoutExtension(file);
                 apparitionsBB.Add(moviesName);
             }
 
-            foreach (String file in Directory.GetFiles("movies/ghost", "*.mp4"))
-            {
+            foreach (String file in Directory.GetFiles("movies/ghost", "*.mp4")) {
                 string moviesName = Path.GetFileNameWithoutExtension(file);
                 ghosts.Add(moviesName);
             }
 
-            foreach (String file in Directory.GetFiles("movies/skeleton", "*.mp4"))
-            {
+            foreach (String file in Directory.GetFiles("movies/skeleton", "*.mp4")) {
                 string moviesName = Path.GetFileNameWithoutExtension(file);
                 skeletons.Add(moviesName);
             }
@@ -114,7 +111,26 @@ namespace MagicMirrorTest
             folders.Add("princess", princess);
             folders.Add("misc", misc);
 
+            for (int i = folders.Count - 1; i >= 0; i--) {
+                var item = folders.ElementAt(i);
+                String itemKey = item.Key;
+                List<String> itemValue = item.Value;
+                foreach (String movie in itemValue) {
+                    preloadMovie(itemKey.Replace("\\", "/") + "/" + movie);
+                }
+            }
         }
+
+        private void preloadMovie(String movie)
+        {
+            Console.WriteLine("Preload: " + movie);
+            MediaElement mediaElement = new MediaElement();
+            mediaElement.LoadedBehavior = MediaState.Pause;
+            mediaElement.Source = new Uri(System.IO.Path.GetFullPath("movies\\" + movie + ".mp4"));
+            mediaElement.MediaEnded += mediaElement_MediaEnded;
+            movieMedia.Add(movie, mediaElement);
+        }
+
 
         private void initWebServer()
         {
@@ -281,13 +297,28 @@ namespace MagicMirrorTest
             return toReturn;
         }
 
+        void StopAllMovies()
+        {
+            foreach (UIElement o in dockP.Children) {
+                if (o is MediaElement) {
+                    ((MediaElement)o).Stop();
+                }
+            }
+            dockP.Children.Clear();
+        }
+
         void PlayMovie(string name)
         {
+            MediaElement mediaElement = movieMedia[name];
+
+            StopAllMovies();
+
             mediaElement.LoadedBehavior = MediaState.Manual;
-            mediaElement.Source = new Uri(System.IO.Path.GetFullPath("movies\\" + name + ".mp4"));
+            //mediaElement.Source = new Uri(System.IO.Path.GetFullPath("movies\\" + name + ".mp4"));
             mediaElement.Visibility = Visibility.Visible;
+            dockP.Children.Add(mediaElement);
             mediaElement.Play();
-            dbgText[1] = "Face: " + "movies\\" + name + ".mp4";
+            dbgText[1] = "Face: " + name;
             updateDebugText();
         }
 
@@ -298,7 +329,7 @@ namespace MagicMirrorTest
 
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
         {
-            mediaElement.Visibility = Visibility.Hidden;
+            StopAllMovies();
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
