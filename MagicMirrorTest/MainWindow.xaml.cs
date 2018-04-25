@@ -329,7 +329,7 @@ namespace MagicMirrorTest
             mediaElement.Visibility = Visibility.Visible;
             dockP.Children.Add(mediaElement);
             mediaElement.Play();
-            dbgText[1] = "Face: " + name;
+            dbgText[1] = "Face: " + name.Replace("_", "-");
             updateDebugText();
         }
 
