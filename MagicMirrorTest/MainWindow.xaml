@@ -10,7 +10,7 @@
         <DockPanel x:Name="dockP">
             <!-- <MediaElement x:Name="mediaElement" MediaEnded="mediaElement_MediaEnded"/>  -->
         </DockPanel>
-        <Label x:Name="labelDebugInfo" Background="#00000000" DockPanel.Dock="Bottom" Foreground="#FF10FF10" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="48" Content="labelDebugInfo" RenderTransformOrigin="0.5,0.5" Margin="540,0,-116,314" >
+        <Label x:Name="labelDebugInfo" Background="#00000000" DockPanel.Dock="Bottom" Foreground="#FFFFFF10" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="48" Content="labelDebugInfo" RenderTransformOrigin="0.5,0.5" Margin="436,0,-12,133" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

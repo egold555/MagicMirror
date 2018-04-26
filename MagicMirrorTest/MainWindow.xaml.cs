@@ -26,11 +26,11 @@ namespace MagicMirrorTest
     public partial class MainWindow : Window
     {
 
-        const bool SECOND_MONITOR = false;
+        const bool SECOND_MONITOR = true;
 
         Dictionary<String, List<String>> folders = new Dictionary<String, List<String>>();
         Dictionary<String, MediaElement> movieMedia = new Dictionary<String, MediaElement>();
-        String[] dbgText = new String[2];
+        String[] dbgText = new String[3];
         private const String PORT = "8080";
 
         private Dictionary<String, String> wsIcons = new Dictionary<String, String>();
@@ -119,6 +119,9 @@ namespace MagicMirrorTest
                     preloadMovie(itemKey.Replace("\\", "/") + "/" + movie);
                 }
             }
+
+            dbgText[2] = "Animations: "+ movieMedia.Count;
+            updateDebugText();
         }
 
         private void preloadMovie(String movie)
@@ -196,6 +199,9 @@ namespace MagicMirrorTest
             //Always Blue Text
             toReturn += "a:link{color:#00ceff}a:visited{color:#00ceff}a:hover{color:#00ceff}a:active{color:#00ceff}";
 
+            //No text selection
+            toReturn += "*{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}";
+
             //Add all icons
             for (int i = wsIcons.Count - 1; i >= 0; i--)
             {
@@ -216,11 +222,11 @@ namespace MagicMirrorTest
             toReturn += "<body>";
 
             if (request.RawUrl.StartsWith("/play/")) {
-                toReturn += "<div class=\"icon-back\"><a href=\"/\" >Back</a></div>";
+                toReturn += "<div class=\"shouldnot icon-back\"><a href=\"/\" >Back</a></div>";
                 toReturn += ResponcePlay(request);
             }
             else if (request.RawUrl.StartsWith("/settings/")) {
-                toReturn += "<div class=\"icon-back\"><a href=\"/\" >Back</a></div>";
+                toReturn += "<div class=\"shouldnot icon-back\"><a href=\"/\" >Back</a></div>";
                 toReturn += ResponceSettings(request);
             }
             else {
@@ -237,8 +243,8 @@ namespace MagicMirrorTest
         {
             String toReturn = "";
 
-            toReturn += "<div class=\"icon-princess\"><a href=\"/play/\">Faces</a></div>";
-            toReturn += "<div class=\"icon-settings\"><a href=\"/settings/\" >Settings</a></div>";
+            toReturn += "<div class=\"shouldnot icon-princess\"><a href=\"/play/\">Faces</a></div>";
+            toReturn += "<div class=\"shouldnot icon-settings\"><a href=\"/settings/\" >Settings</a></div>";
 
             return toReturn;
         }
@@ -255,7 +261,7 @@ namespace MagicMirrorTest
 
             String toReturn = "";
 
-            toReturn += "<div class=\"icon-debugText\"><a href=\"/settings/debugText/\">Debug Text</a></div>";
+            toReturn += "<div class=\"should icon-debugText\"><a href=\"/settings/debugText/\">Debug Text</a></div>";
 
             return toReturn;
         }
@@ -288,7 +294,7 @@ namespace MagicMirrorTest
 
             String toReturn = "";
 
-            toReturn += "<div class=\"icon-stop\"\"><a href=\"/play/movie/stop\">STOP ALL</a></div>";
+            toReturn += "<div class=\"should icon-stop\"\"><a href=\"/play/movie/stop\">STOP ALL</a></div>";
 
             //TODO: THIS IS WHY EVERYTHING IS BACKWARDS
             for (int i = folders.Count - 1; i >= 0; i--) {
@@ -299,7 +305,7 @@ namespace MagicMirrorTest
 
                     String iconClass = "icon-" + itemKey.Replace('\\', '-').Replace('_', '-');
 
-                    toReturn += "<div class=" + iconClass + "><a href=\"/play/movie/" + itemKey + "/" + movie + "\">" + movie + "</a></div>";
+                    toReturn += "<div class=\"should " + iconClass + "\"><a href=\"/play/movie/" + itemKey + "/" + movie + "\">" + movie + "</a></div>";
                     
                 }
             }
@@ -354,7 +360,7 @@ namespace MagicMirrorTest
         {
             String toPrint = "";
             for(int i = 0; i < dbgText.Length; i++) {
-                toPrint += dbgText[i] + "\r\n";
+                toPrint += dbgText[i] + "\r\n\r\n";
             }
             labelDebugInfo.Content = toPrint;
         }
