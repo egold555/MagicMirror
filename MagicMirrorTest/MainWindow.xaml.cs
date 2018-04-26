@@ -251,17 +251,21 @@ namespace MagicMirrorTest
 
         private String ResponceSettings(HttpListenerRequest request)
         {
-            string theSetting = request.RawUrl.Substring(10);
+            string theSetting = request.RawUrl;
 
-            this.Dispatcher.Invoke(delegate {
-                if (theSetting == "debugText/") {
-                    labelDebugInfo.Visibility = ToggleVisibility(labelDebugInfo.Visibility);
-                }
-            });
+            if (theSetting.Contains("/change/")) {
+                this.Dispatcher.Invoke(delegate {
+                    if (theSetting.Contains("debugText")) {
+                        labelDebugInfo.Visibility = ToggleVisibility(labelDebugInfo.Visibility);
+                    }
+                });
+                return "";
+            }
+            
 
             String toReturn = "";
 
-            toReturn += "<div class=\"should icon-debugText\"><a href=\"/settings/debugText/\">Debug Text</a></div>";
+            toReturn += "<div class=\"should icon-debugText\"><a href=\"/settings/change/debugText/\">Debug Text</a></div>";
 
             return toReturn;
         }
@@ -289,6 +293,7 @@ namespace MagicMirrorTest
                         PlayMovie(theMovie);
                     });
                 }
+                return "";
             }
 
 
